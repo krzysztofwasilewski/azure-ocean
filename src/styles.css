@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+
+  --color-navy-950: #06142a;
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #12305a;
+  --color-navy-700: #1a416f;
+
+  --color-azure-50: #eef7fe;
+  --color-azure-100: #dceefc;
+  --color-azure-200: #b6dbf8;
+  --color-azure-300: #84c1f2;
+  --color-azure-400: #4fa3ec;
+  --color-azure-500: #1e86db;
+  --color-azure-600: #1569c7;
+  --color-azure-700: #12549f;
+  --color-azure-800: #10447f;
+  --color-azure-900: #0d3561;
+
+  --color-foam-50: #f5fafc;
+
+  --color-coral-50: #fcf1ef;
+  --color-coral-100: #f7dcd7;
+  --color-coral-300: #e59a91;
+  --color-coral-500: #cf5d52;
+  --color-coral-600: #b4473e;
+  --color-coral-700: #8f372f;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  em {
+    font-style: italic;
+  }
+  ::selection {
+    background: var(--color-azure-200);
+    color: var(--color-navy-900);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-azure-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--color-navy-900);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.8rem 1.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  .btn-primary {
+    background: var(--color-navy-900);
+    color: #fff;
+    box-shadow: 0 6px 20px -8px rgb(11 31 58 / 0.5);
+  }
+  .btn-primary:hover {
+    background: var(--color-azure-700);
+  }
+  .btn-secondary {
+    background: #fff;
+    color: var(--color-navy-900);
+    box-shadow: inset 0 0 0 1px var(--color-azure-200);
+  }
+  .btn-secondary:hover {
+    box-shadow: inset 0 0 0 1px var(--color-azure-400);
+    color: var(--color-azure-700);
+  }
+  .btn-light {
+    background: #fff;
+    color: var(--color-navy-900);
+    padding: 0.95rem 1.7rem;
+    font-size: 1.05rem;
+  }
+  .btn-light:hover {
+    background: var(--color-azure-50);
+  }
+
+  .site-header.is-scrolled {
+    border-bottom-color: var(--color-azure-100);
+    box-shadow: 0 4px 24px -16px rgb(11 31 58 / 0.35);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .canvas-azure {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw-line 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+  }
+  @keyframes draw-line {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover {
+    transform: none;
+  }
+}
