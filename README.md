@@ -32,7 +32,7 @@ In `npm run dev`, Vite restarts when `src/render.ts`, `src/config.ts` or `src/i1
 
 ## Before going live
 
-- [ ] `site.bookingUrl`: set it to your Cal.com or Calendly page. While it is empty, every "Book a call" button opens an email to `site.email`.
+- [x] `site.bookingUrl`: set to https://cal.com/chris.wasilewski. If you empty it, every "Book a call" button opens an email to `site.email`.
 - [ ] `site.email`: confirm the mailbox exists (currently `hello@azure-ocean.com`).
 - [ ] `site.linkedinUrl`: add your LinkedIn profile. The link stays hidden while it is empty.
 - [ ] `about.founderBio` in both language files: check that it describes you the way you want.

@@ -8,7 +8,7 @@ export const site = {
    * Cal.com / Calendly / Google booking page. While this is empty, every
    * "Book a call" button falls back to an email link to `email` below.
    */
-  bookingUrl: '',
+  bookingUrl: 'https://cal.com/chris.wasilewski',
 
   /** Public contact address. TODO: confirm this mailbox exists. */
   email: 'hello@azure-ocean.com',
