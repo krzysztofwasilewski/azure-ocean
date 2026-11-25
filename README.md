@@ -33,7 +33,7 @@ In `npm run dev`, Vite restarts when `src/render.ts`, `src/config.ts` or `src/i1
 ## Before going live
 
 - [x] `site.bookingUrl`: set to https://cal.com/chris.wasilewski. If you empty it, every "Book a call" button opens an email to `site.email`.
-- [ ] `site.email`: confirm the mailbox exists (currently `hello@azure-ocean.com`).
+- [x] `site.email`: set to `chris@azure-ocean.com`.
 - [ ] `site.linkedinUrl`: add your LinkedIn profile. The link stays hidden while it is empty.
 - [ ] `about.founderBio` in both language files: check that it describes you the way you want.
 - [ ] Optional: `site.cloudflareAnalyticsToken` adds Cloudflare Web Analytics, which sets no cookies.

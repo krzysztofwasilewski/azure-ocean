@@ -10,8 +10,8 @@ export const site = {
    */
   bookingUrl: 'https://cal.com/chris.wasilewski',
 
-  /** Public contact address. TODO: confirm this mailbox exists. */
-  email: 'hello@azure-ocean.com',
+  /** Public contact address. */
+  email: 'chris@azure-ocean.com',
 
   /** Founder's LinkedIn profile URL. Hidden while empty. */
   linkedinUrl: '',
